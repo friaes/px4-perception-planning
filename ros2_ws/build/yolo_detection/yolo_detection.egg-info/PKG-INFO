@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: yolo-detection
+Version: 0.0.1
+Summary: ROS2 YOLO object detection node for PX4 SITL
+Maintainer: student
+Maintainer-email: student@example.com
+License: MIT

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from detection_msgs/msg/Detection2D.msg
+// generated code does not contain a copyright notice
+
+
+module detection_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Bounding box")
+    struct Detection2D {
+      float x_min;
+
+      float y_min;
+
+      float x_max;
+
+      float y_max;
+
+      @verbatim (language="comment", text=
+        "Detected class label")
+      string class_name;
+
+      @verbatim (language="comment", text=
+        "Class index")
+      int32 class_id;
+
+      @verbatim (language="comment", text=
+        "Confidence score")
+      float confidence;
+    };
+  };
+};

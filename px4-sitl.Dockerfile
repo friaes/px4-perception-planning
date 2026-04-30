@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     ninja-build \
     python3-dev \
+    python3-opencv \
     python3-pip \
     python3-setuptools \
     python3-wheel \
@@ -53,6 +54,16 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     pyros-genmsg \
     lxml
 
+# Install YOLO runtime dependencies (CPU wheels)
+RUN pip3 install --no-cache-dir --break-system-packages \
+    --index-url https://download.pytorch.org/whl/cpu \
+    --extra-index-url https://pypi.org/simple \
+    torch torchvision torchaudio \
+    && pip3 install --no-cache-dir --break-system-packages \
+    --extra-index-url https://pypi.org/simple \
+    --no-deps \
+    ultralytics
+
 # ============================================================================
 # Clone and build PX4 Autopilot
 # ============================================================================
@@ -60,11 +71,20 @@ WORKDIR /root
 RUN git clone https://github.com/PX4/PX4-Autopilot.git --recursive \
     && cd PX4-Autopilot 
 
+# Enable the Gazebo Harmonic sensor system plugin for the OakD-Lite camera.
+RUN sed -i \
+    -e 's|<!-- <plugin filename="ignition-gazebo-sensors-system"|<plugin filename="gz-sim-sensors-system"|' \
+    -e 's|name="ignition::gazebo::systems::Sensors">|name="gz::sim::systems::Sensors">|' \
+    -e 's|</plugin> -->|</plugin>|' \
+    /root/PX4-Autopilot/Tools/simulation/gz/models/OakD-Lite/model.sdf
+
 # WORKDIR /root/PX4-Autopilot
 # RUN DONT_RUN=1 make px4_sitl gz_x500
 
 # Install Mavros package
 RUN apt-get update && apt-get install -y \
+    ros-jazzy-cv-bridge \
+    ros-jazzy-message-filters \
     ros-jazzy-mavros
 
 # Install dependencies for Mavros

@@ -1,0 +1,187 @@
+[0.000000] (-) TimerEvent: {}
+[0.000109] (detection_msgs) JobQueued: {'identifier': 'detection_msgs', 'dependencies': OrderedDict()}
+[0.000142] (yolo_detection) JobQueued: {'identifier': 'yolo_detection', 'dependencies': OrderedDict({'detection_msgs': '/root/ros2_ws/install/detection_msgs'})}
+[0.000557] (detection_msgs) JobStarted: {'identifier': 'detection_msgs'}
+[0.006550] (detection_msgs) JobProgress: {'identifier': 'detection_msgs', 'progress': 'cmake'}
+[0.007141] (detection_msgs) JobProgress: {'identifier': 'detection_msgs', 'progress': 'build'}
+[0.007483] (detection_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/ros2_ws/build/detection_msgs', '--', '-j20', '-l20'], 'cwd': '/root/ros2_ws/build/detection_msgs', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '963ad0aadc37', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'PS1': '(yolo_venv)', 'AUTO_BUILD_ROS2_WS': '1', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PX4_GZ_WORLD': 'aufgabe1_fuel_world', 'PATH': '/root/yolo_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/yolo_venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'VIRTUAL_ENV_PROMPT': '(yolo_venv)', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'VIRTUAL_ENV': '/root/yolo_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/build/detection_msgs', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.054407] (detection_msgs) StdoutLine: {'line': b'[  2%] Built target detection_msgs__rosidl_generator_type_description\n'}
+[0.054685] (detection_msgs) StdoutLine: {'line': b'[  4%] Built target detection_msgs__rs\n'}
+[0.061941] (detection_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_symlink_detection_msgs\n'}
+[0.072151] (detection_msgs) StdoutLine: {'line': b'[  6%] Built target detection_msgs__cpp\n'}
+[0.074630] (detection_msgs) StdoutLine: {'line': b'[ 24%] Built target detection_msgs__rosidl_generator_c\n'}
+[0.092924] (detection_msgs) StdoutLine: {'line': b'[ 33%] Built target detection_msgs__rosidl_typesupport_introspection_c\n'}
+[0.093452] (detection_msgs) StdoutLine: {'line': b'[ 42%] Built target detection_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.093889] (detection_msgs) StdoutLine: {'line': b'[ 51%] Built target detection_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.094778] (detection_msgs) StdoutLine: {'line': b'[ 60%] Built target detection_msgs__rosidl_typesupport_c\n'}
+[0.098216] (detection_msgs) StdoutLine: {'line': b'[ 71%] Built target detection_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.098355] (detection_msgs) StdoutLine: {'line': b'[ 77%] Built target detection_msgs__rosidl_typesupport_cpp\n'}
+[0.099791] (-) TimerEvent: {}
+[0.113003] (detection_msgs) StdoutLine: {'line': b'[ 77%] Built target detection_msgs\n'}
+[0.130289] (detection_msgs) StdoutLine: {'line': b'[ 80%] Built target detection_msgs__py\n'}
+[0.150903] (detection_msgs) StdoutLine: {'line': b'[ 86%] Built target detection_msgs__rosidl_generator_py\n'}
+[0.171374] (detection_msgs) StdoutLine: {'line': b'[ 95%] Built target detection_msgs_s__rosidl_typesupport_introspection_c\n'}
+[0.171549] (detection_msgs) StdoutLine: {'line': b'[ 95%] Built target detection_msgs_s__rosidl_typesupport_c\n'}
+[0.172328] (detection_msgs) StdoutLine: {'line': b'[100%] Built target detection_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[0.197256] (detection_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.199875] (-) TimerEvent: {}
+[0.248955] (detection_msgs) StdoutLine: {'line': b'writing detection_msgs.egg-info/PKG-INFO\n'}
+[0.249377] (detection_msgs) StdoutLine: {'line': b'writing dependency_links to detection_msgs.egg-info/dependency_links.txt\n'}
+[0.249484] (detection_msgs) StdoutLine: {'line': b'writing top-level names to detection_msgs.egg-info/top_level.txt\n'}
+[0.281561] (detection_msgs) StdoutLine: {'line': b"reading manifest file 'detection_msgs.egg-info/SOURCES.txt'\n"}
+[0.281961] (detection_msgs) StdoutLine: {'line': b"writing manifest file 'detection_msgs.egg-info/SOURCES.txt'\n"}
+[0.300092] (-) TimerEvent: {}
+[0.300716] (detection_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_detection_msgs_egg\n'}
+[0.307895] (detection_msgs) CommandEnded: {'returncode': 0}
+[0.308585] (detection_msgs) JobProgress: {'identifier': 'detection_msgs', 'progress': 'install'}
+[0.313631] (detection_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/ros2_ws/build/detection_msgs'], 'cwd': '/root/ros2_ws/build/detection_msgs', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '963ad0aadc37', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'PS1': '(yolo_venv)', 'AUTO_BUILD_ROS2_WS': '1', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PX4_GZ_WORLD': 'aufgabe1_fuel_world', 'PATH': '/root/yolo_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/yolo_venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'VIRTUAL_ENV_PROMPT': '(yolo_venv)', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'VIRTUAL_ENV': '/root/yolo_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/build/detection_msgs', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.319248] (detection_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.319911] (detection_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.320033] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/ament_index/resource_index/rosidl_interfaces/detection_msgs\n'}
+[0.320207] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2D.json\n'}
+[0.320394] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2DArray.json\n'}
+[0.321291] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__functions.h\n'}
+[0.321391] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__struct.h\n'}
+[0.321520] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__type_support.h\n'}
+[0.321657] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__functions.h\n'}
+[0.321771] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__struct.h\n'}
+[0.322052] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__type_support.h\n'}
+[0.322141] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detection2_d.h\n'}
+[0.322200] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detection2_d_array.h\n'}
+[0.322361] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.322529] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/library_path.sh\n'}
+[0.322718] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/library_path.dsv\n'}
+[0.323026] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[0.323116] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.323294] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.323568] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__rosidl_typesupport_introspection_c.h\n'}
+[0.323652] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__rosidl_typesupport_introspection_c.h\n'}
+[0.323834] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.324118] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__builder.hpp\n'}
+[0.324362] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__struct.hpp\n'}
+[0.324398] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__traits.hpp\n'}
+[0.324549] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__type_support.hpp\n'}
+[0.324632] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__builder.hpp\n'}
+[0.324804] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__struct.hpp\n'}
+[0.324938] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__traits.hpp\n'}
+[0.325028] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__type_support.hpp\n'}
+[0.325172] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detection2_d.hpp\n'}
+[0.325383] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detection2_d_array.hpp\n'}
+[0.325487] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.325889] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.325995] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.326152] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.326370] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.326420] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/include/detection_msgs/detection_msgs/msg/detail/detection2_d_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.326496] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/pythonpath.sh\n'}
+[0.326584] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/pythonpath.dsv\n'}
+[0.326885] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs-0.0.1-py3.12.egg-info/PKG-INFO\n'}
+[0.327028] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs-0.0.1-py3.12.egg-info/SOURCES.txt\n'}
+[0.327175] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs-0.0.1-py3.12.egg-info/dependency_links.txt\n'}
+[0.327292] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs-0.0.1-py3.12.egg-info/top_level.txt\n'}
+[0.327712] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/__init__.py\n'}
+[0.327898] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/_detection_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.328026] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/_detection_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.328159] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/_detection_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.328312] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_c.so\n'}
+[0.328455] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.328584] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.328688] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg/__init__.py\n'}
+[0.328808] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg/_detection2_d.py\n'}
+[0.328960] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg/_detection2_d_array.py\n'}
+[0.329107] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg/_detection2_d_array_s.c\n'}
+[0.329245] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg/_detection2_d_s.c\n'}
+[0.329477] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.329710] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.329942] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/detection_msgs_s__rosidl_typesupport_c.so\n'}
+[0.330106] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/ament_index/resource_index/rust_packages/detection_msgs\n'}
+[0.330370] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/rust/Cargo.toml\n'}
+[0.330503] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/rust/build.rs\n'}
+[0.330635] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/rust/src/lib.rs\n'}
+[0.330789] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/rust/src/msg.rs\n'}
+[0.330923] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/rust/src/msg/rmw.rs\n'}
+[0.331180] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2D.idl\n'}
+[0.331299] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2DArray.idl\n'}
+[0.331373] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2D.msg\n'}
+[0.331442] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/msg/Detection2DArray.msg\n'}
+[0.331609] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/ament_index/resource_index/package_run_dependencies/detection_msgs\n'}
+[0.331749] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/ament_index/resource_index/parent_prefix_path/detection_msgs\n'}
+[0.331922] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/ament_prefix_path.sh\n'}
+[0.332083] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/ament_prefix_path.dsv\n'}
+[0.332250] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/path.sh\n'}
+[0.332331] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/environment/path.dsv\n'}
+[0.332451] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/local_setup.bash\n'}
+[0.332586] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/local_setup.sh\n'}
+[0.332760] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/local_setup.zsh\n'}
+[0.332859] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/local_setup.dsv\n'}
+[0.332954] (detection_msgs) StdoutLine: {'line': b'-- Symlinking: /root/ros2_ws/install/detection_msgs/share/detection_msgs/package.dsv\n'}
+[0.339479] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/ament_index/resource_index/packages/detection_msgs\n'}
+[0.339545] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.339721] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.339889] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.340049] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.340141] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.340228] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.340316] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.340400] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig.cmake\n'}
+[0.340453] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig-version.cmake\n'}
+[0.340504] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/install/detection_msgs/share/detection_msgs/package.xml\n'}
+[0.340885] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_generator_c.so\n'}
+[0.341267] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.341723] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.341923] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_c.so\n'}
+[0.342448] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.342958] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.343390] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_typesupport_cpp.so\n'}
+[0.366363] (detection_msgs) StdoutLine: {'line': b"Listing '/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs'...\n"}
+[0.366466] (detection_msgs) StdoutLine: {'line': b"Listing '/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages/detection_msgs/msg'...\n"}
+[0.369570] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/lib/libdetection_msgs__rosidl_generator_py.so\n'}
+[0.370129] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_generator_cExport.cmake\n'}
+[0.370207] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.370392] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.370466] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.370626] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.370716] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.370862] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.370936] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.371150] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.371415] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.371497] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.371552] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.371650] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.372116] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.372195] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/detection_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.372233] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.372267] (detection_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/install/detection_msgs/share/detection_msgs/cmake/export_detection_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.373754] (detection_msgs) CommandEnded: {'returncode': 0}
+[0.388085] (detection_msgs) JobEnded: {'identifier': 'detection_msgs', 'rc': 0}
+[0.388476] (yolo_detection) JobStarted: {'identifier': 'yolo_detection'}
+[0.400195] (-) TimerEvent: {}
+[0.500397] (-) TimerEvent: {}
+[0.600618] (-) TimerEvent: {}
+[0.700991] (-) TimerEvent: {}
+[0.801326] (-) TimerEvent: {}
+[0.901619] (-) TimerEvent: {}
+[0.909162] (yolo_detection) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/root/ros2_ws/build/yolo_detection/build', '--no-deps', 'symlink_data'], 'cwd': '/root/ros2_ws/build/yolo_detection', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '963ad0aadc37', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/root/ros2_ws/install/detection_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'PS1': '(yolo_venv)', 'AUTO_BUILD_ROS2_WS': '1', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PX4_GZ_WORLD': 'aufgabe1_fuel_world', 'PATH': '/root/yolo_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/yolo_venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'VIRTUAL_ENV_PROMPT': '(yolo_venv)', 'AMENT_PREFIX_PATH': '/root/ros2_ws/install/detection_msgs:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'VIRTUAL_ENV': '/root/yolo_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/build/yolo_detection', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/ros2_ws/build/yolo_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages:/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/install/detection_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.001858] (-) TimerEvent: {}
+[1.102114] (-) TimerEvent: {}
+[1.102478] (yolo_detection) StdoutLine: {'line': b'running develop\n'}
+[1.202234] (-) TimerEvent: {}
+[1.214810] (yolo_detection) StdoutLine: {'line': b'running egg_info\n'}
+[1.225288] (yolo_detection) StdoutLine: {'line': b'writing yolo_detection.egg-info/PKG-INFO\n'}
+[1.225528] (yolo_detection) StdoutLine: {'line': b'writing dependency_links to yolo_detection.egg-info/dependency_links.txt\n'}
+[1.225645] (yolo_detection) StdoutLine: {'line': b'writing entry points to yolo_detection.egg-info/entry_points.txt\n'}
+[1.225917] (yolo_detection) StdoutLine: {'line': b'writing requirements to yolo_detection.egg-info/requires.txt\n'}
+[1.225972] (yolo_detection) StdoutLine: {'line': b'writing top-level names to yolo_detection.egg-info/top_level.txt\n'}
+[1.247050] (yolo_detection) StdoutLine: {'line': b"reading manifest file 'yolo_detection.egg-info/SOURCES.txt'\n"}
+[1.248324] (yolo_detection) StdoutLine: {'line': b"writing manifest file 'yolo_detection.egg-info/SOURCES.txt'\n"}
+[1.259222] (yolo_detection) StdoutLine: {'line': b'running build_ext\n'}
+[1.259306] (yolo_detection) StdoutLine: {'line': b'Creating /root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages/yolo-detection.egg-link (link to .)\n'}
+[1.259671] (yolo_detection) StdoutLine: {'line': b'Installing visualizer_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection\n'}
+[1.259885] (yolo_detection) StdoutLine: {'line': b'Installing yolo_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection\n'}
+[1.259968] (yolo_detection) StdoutLine: {'line': b'\n'}
+[1.260008] (yolo_detection) StdoutLine: {'line': b'Installed /root/ros2_ws/build/yolo_detection\n'}
+[1.260043] (yolo_detection) StdoutLine: {'line': b'running symlink_data\n'}
+[1.277368] (yolo_detection) CommandEnded: {'returncode': 0}
+[1.281808] (yolo_detection) JobEnded: {'identifier': 'yolo_detection', 'rc': 0}
+[1.282293] (-) EventReactorShutdown: {}

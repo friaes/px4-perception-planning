@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from detection_msgs/msg/Detection2DArray.msg
+// generated code does not contain a copyright notice
+
+#include "detection_msgs/msg/Detection2D.idl"
+#include "std_msgs/msg/Header.idl"
+
+module detection_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Header with timestamp and frame_id")
+    struct Detection2DArray {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Array of detections for this frame")
+      sequence<detection_msgs::msg::Detection2D> detections;
+
+      @verbatim (language="comment", text=
+        "Performance metrics" "\n"
+        "time taken for YOLO inference only")
+      float inference_latency_ms;
+
+      @verbatim (language="comment", text=
+        "time from image received to message published")
+      float total_latency_ms;
+
+      @verbatim (language="comment", text=
+        "frames per second (rolling average)")
+      float fps;
+    };
+  };
+};

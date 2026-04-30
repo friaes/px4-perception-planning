@@ -1,0 +1,27 @@
+[0.513s] Invoking command in '/root/ros2_ws/build/yolo_detection': AMENT_PREFIX_PATH=/root/ros2_ws/install/detection_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/install/detection_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/ros2_ws/install/detection_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/build/yolo_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages:/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ros2_ws/build/yolo_detection/build --no-deps symlink_data
+[0.713s] running develop
+[0.823s] running egg_info
+[0.823s] creating yolo_detection.egg-info
+[0.835s] writing yolo_detection.egg-info/PKG-INFO
+[0.835s] writing dependency_links to yolo_detection.egg-info/dependency_links.txt
+[0.835s] writing entry points to yolo_detection.egg-info/entry_points.txt
+[0.835s] writing requirements to yolo_detection.egg-info/requires.txt
+[0.835s] writing top-level names to yolo_detection.egg-info/top_level.txt
+[0.836s] writing manifest file 'yolo_detection.egg-info/SOURCES.txt'
+[0.858s] reading manifest file 'yolo_detection.egg-info/SOURCES.txt'
+[0.858s] writing manifest file 'yolo_detection.egg-info/SOURCES.txt'
+[0.870s] running build_ext
+[0.870s] Creating /root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages/yolo-detection.egg-link (link to .)
+[0.871s] Installing visualizer_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection
+[0.871s] Installing yolo_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection
+[0.871s] 
+[0.871s] Installed /root/ros2_ws/build/yolo_detection
+[0.871s] running symlink_data
+[0.871s] creating /root/ros2_ws/install/yolo_detection/share/ament_index
+[0.871s] creating /root/ros2_ws/install/yolo_detection/share/ament_index/resource_index
+[0.871s] creating /root/ros2_ws/install/yolo_detection/share/ament_index/resource_index/packages
+[0.871s] symbolically linking /root/ros2_ws/build/yolo_detection/resource/yolo_detection -> /root/ros2_ws/install/yolo_detection/share/ament_index/resource_index/packages
+[0.871s] symbolically linking /root/ros2_ws/build/yolo_detection/package.xml -> /root/ros2_ws/install/yolo_detection/share/yolo_detection
+[0.872s] creating /root/ros2_ws/install/yolo_detection/share/yolo_detection/launch
+[0.872s] symbolically linking /root/ros2_ws/build/yolo_detection/launch/yolo_detection.launch.py -> /root/ros2_ws/install/yolo_detection/share/yolo_detection/launch
+[0.890s] Invoked command in '/root/ros2_ws/build/yolo_detection' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/install/detection_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/install/detection_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/ros2_ws/install/detection_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/build/yolo_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages:/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ros2_ws/build/yolo_detection/build --no-deps symlink_data

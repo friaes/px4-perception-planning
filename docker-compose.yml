@@ -10,15 +10,16 @@ services:
     privileged: true
     stdin_open: true
     tty: true
-    
-    # volumes:
-      # - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      # - /home/user/workspace:/root/workspace
+
+    volumes:
+      #- /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./ros2_ws:/root/ros2_ws
+      - ./worlds/aufgabe1_fuel_world.sdf:/root/PX4-Autopilot/Tools/simulation/gz/worlds/aufgabe1_fuel_world.sdf:ro
 
     environment:
       - DISPLAY=:1
-      # - DISPLAY=${DISPLAY}
-      # - PX4_GZ_WORLD=default
+      #- DISPLAY=${DISPLAY}
+      - PX4_GZ_WORLD=aufgabe1_fuel_world
 
     ports:
       - "5901:5901"

@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000455] (-) JobUnselected: {'identifier': 'detection_msgs'}
+[0.000536] (yolo_detection) JobQueued: {'identifier': 'yolo_detection', 'dependencies': OrderedDict({'detection_msgs': '/root/ros2_ws/install/detection_msgs'})}
+[0.000627] (yolo_detection) JobStarted: {'identifier': 'yolo_detection'}
+[0.099271] (-) TimerEvent: {}
+[0.199514] (-) TimerEvent: {}
+[0.299853] (-) TimerEvent: {}
+[0.400069] (-) TimerEvent: {}
+[0.500301] (-) TimerEvent: {}
+[0.600519] (-) TimerEvent: {}
+[0.700891] (-) TimerEvent: {}
+[0.801079] (-) TimerEvent: {}
+[0.901280] (-) TimerEvent: {}
+[1.001485] (-) TimerEvent: {}
+[1.101733] (-) TimerEvent: {}
+[1.202921] (-) TimerEvent: {}
+[1.303164] (-) TimerEvent: {}
+[1.363996] (yolo_detection) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/root/ros2_ws/build/yolo_detection/build', '--no-deps', 'symlink_data'], 'cwd': '/root/ros2_ws/build/yolo_detection', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '2d7adf6dbf46', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/root/ros2_ws/install/detection_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/root/ros2_ws/install/detection_msgs:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/build/yolo_detection', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share/:/usr/share/', 'PYTHONPATH': '/root/ros2_ws/build/yolo_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages:/root/ros2_ws/install/detection_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/install/detection_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.403281] (-) TimerEvent: {}
+[1.503520] (-) TimerEvent: {}
+[1.603752] (-) TimerEvent: {}
+[1.703975] (-) TimerEvent: {}
+[1.804229] (-) TimerEvent: {}
+[1.817228] (yolo_detection) StdoutLine: {'line': b'running develop\n'}
+[1.904367] (-) TimerEvent: {}
+[2.004574] (-) TimerEvent: {}
+[2.069832] (yolo_detection) StdoutLine: {'line': b'running egg_info\n'}
+[2.096961] (yolo_detection) StdoutLine: {'line': b'writing yolo_detection.egg-info/PKG-INFO\n'}
+[2.097219] (yolo_detection) StdoutLine: {'line': b'writing dependency_links to yolo_detection.egg-info/dependency_links.txt\n'}
+[2.097409] (yolo_detection) StdoutLine: {'line': b'writing entry points to yolo_detection.egg-info/entry_points.txt\n'}
+[2.097539] (yolo_detection) StdoutLine: {'line': b'writing requirements to yolo_detection.egg-info/requires.txt\n'}
+[2.097647] (yolo_detection) StdoutLine: {'line': b'writing top-level names to yolo_detection.egg-info/top_level.txt\n'}
+[2.104670] (-) TimerEvent: {}
+[2.150444] (yolo_detection) StdoutLine: {'line': b"reading manifest file 'yolo_detection.egg-info/SOURCES.txt'\n"}
+[2.152748] (yolo_detection) StdoutLine: {'line': b"writing manifest file 'yolo_detection.egg-info/SOURCES.txt'\n"}
+[2.181083] (yolo_detection) StdoutLine: {'line': b'running build_ext\n'}
+[2.181423] (yolo_detection) StdoutLine: {'line': b'Creating /root/ros2_ws/install/yolo_detection/lib/python3.12/site-packages/yolo-detection.egg-link (link to .)\n'}
+[2.182408] (yolo_detection) StdoutLine: {'line': b'Installing visualizer_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection\n'}
+[2.183156] (yolo_detection) StdoutLine: {'line': b'Installing yolo_node script to /root/ros2_ws/install/yolo_detection/lib/yolo_detection\n'}
+[2.183476] (yolo_detection) StdoutLine: {'line': b'\n'}
+[2.183589] (yolo_detection) StdoutLine: {'line': b'Installed /root/ros2_ws/build/yolo_detection\n'}
+[2.183855] (yolo_detection) StdoutLine: {'line': b'running symlink_data\n'}
+[2.185024] (yolo_detection) StdoutLine: {'line': b'creating /root/ros2_ws/install/yolo_detection/share/yolo_detection/config\n'}
+[2.185263] (yolo_detection) StdoutLine: {'line': b'symbolically linking /root/ros2_ws/build/yolo_detection/config/camera_bridge.yaml -> /root/ros2_ws/install/yolo_detection/share/yolo_detection/config\n'}
+[2.204803] (-) TimerEvent: {}
+[2.229308] (yolo_detection) CommandEnded: {'returncode': 0}
+[2.259743] (yolo_detection) JobEnded: {'identifier': 'yolo_detection', 'rc': 0}
+[2.260968] (-) EventReactorShutdown: {}
