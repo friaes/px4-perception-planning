@@ -1,1 +1,0 @@
-/root/ros2_ws/build/yolo_detection/launch/yolo_detection.launch.py

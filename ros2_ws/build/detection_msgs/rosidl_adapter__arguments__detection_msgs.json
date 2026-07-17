@@ -1,7 +1,0 @@
-{
-  "package_name": "detection_msgs",
-  "non_idl_tuples": [
-    "/root/ros2_ws/src/detection_msgs:msg/Detection2D.msg",
-    "/root/ros2_ws/src/detection_msgs:msg/Detection2DArray.msg"
-  ]
-}

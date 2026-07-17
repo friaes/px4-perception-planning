@@ -1,1 +1,0 @@
-/root/ros2_ws/build/detection_msgs/rosidl_typesupport_fastrtps_c/detection_msgs/msg/detail/detection2_d_array__rosidl_typesupport_fastrtps_c.h

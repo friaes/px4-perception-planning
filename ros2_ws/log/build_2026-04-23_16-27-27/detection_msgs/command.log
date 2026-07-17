@@ -1,4 +1,0 @@
-Invoking command in '/root/ros2_ws/build/detection_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(yolo_venv) VIRTUAL_ENV_PROMPT=(yolo_venv) /usr/bin/cmake --build /root/ros2_ws/build/detection_msgs -- -j20 -l20
-Invoked command in '/root/ros2_ws/build/detection_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(yolo_venv) VIRTUAL_ENV_PROMPT=(yolo_venv) /usr/bin/cmake --build /root/ros2_ws/build/detection_msgs -- -j20 -l20
-Invoking command in '/root/ros2_ws/build/detection_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(yolo_venv) VIRTUAL_ENV_PROMPT=(yolo_venv) /usr/bin/cmake --install /root/ros2_ws/build/detection_msgs
-Invoked command in '/root/ros2_ws/build/detection_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(yolo_venv) VIRTUAL_ENV_PROMPT=(yolo_venv) /usr/bin/cmake --install /root/ros2_ws/build/detection_msgs

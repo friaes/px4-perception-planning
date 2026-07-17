@@ -1,1 +1,0 @@
-/root/ros2_ws/build/detection_msgs/rosidl_generator_cpp/detection_msgs/msg/detail/detection2_d__type_support.hpp

@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     ninja-build \
     python3-dev \
+    python3-pkg-resources \
     python3-opencv \
     python3-pip \
     python3-setuptools \
@@ -64,6 +65,22 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     --no-deps \
     ultralytics
 
+# Some pip operations can replace/remove distro Python metadata helpers.
+# Reinstall these ROS-critical modules before validating runtime imports.
+RUN apt-get update && apt-get install -y --reinstall \
+    python3-pkg-resources \
+    python3-setuptools \
+    && rm -rf /var/lib/apt/lists/*
+
+# colcon-core in ROS 2 Jazzy requires setuptools < 80.
+# This also avoids ament_python symlink-install failures from removed options.
+RUN pip3 install --no-cache-dir --break-system-packages --force-reinstall \
+    setuptools==68.2.2
+
+# rosdep and pbr-based ament steps require pkg_resources at runtime.
+RUN python3 -c "import pkg_resources"
+
+RUN pip3 install --no-cache-dir --break-system-packages "setuptools<80"
 # ============================================================================
 # Clone and build PX4 Autopilot
 # ============================================================================

@@ -1,1 +1,0 @@
-/root/ros2_ws/src/detection_msgs/msg/Detection2DArray.msg

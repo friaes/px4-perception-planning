@@ -1,1 +1,0 @@
-/root/ros2_ws/build/detection_msgs/rosidl_generator_rs/detection_msgs/rust/src/lib.rs

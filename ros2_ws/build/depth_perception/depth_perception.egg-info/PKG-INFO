@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: depth-perception
-Version: 0.0.1
-Summary: ROS2 depth estimation and 3D point cloud generation node
-Maintainer: student
-Maintainer-email: student@example.com
-License: MIT
