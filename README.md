@@ -308,12 +308,3 @@ colcon build --packages-select path_planning --symlink-install
 source install/setup.bash
 ```
 
-## Notes
-
-- The A\*/RRT search, occupancy grid, shortcutting, altitude/no-fly handling and
-  the potential-field frame math are all unit-tested offline. The MAVROS execution
-  (offboard arming, mission upload) follows the standard PX4 patterns and should be
-  verified in the loop — arm/OFFBOARD requires a steady setpoint stream (handled by
-  the node) and a connected FCU.
-- Octomap/OMPL/Nav2 are listed as tools but are not installed in the container;
-  the planners are implemented directly instead, matching the Task 2 approach.
