@@ -4,6 +4,16 @@
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
     <atmosphere type="adiabatic"/>
+    <!-- Origin must match <magnetic_field> above (Zurich, same as PX4's stock
+         world). Without this, NavSat defaults to lat/lon 0,0 and EKF2 rejects
+         the magnetometer: "Strong magnetic interference" / "no heading reference". -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg>8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
 
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
@@ -19,6 +29,30 @@
     <plugin
       filename="gz-sim-scene-broadcaster-system"
       name="gz::sim::systems::SceneBroadcaster"/>
+    <!-- Sensor systems required by PX4. Gazebo only loads its default plugin
+         set when a world declares NO plugins; because this world declares
+         some, every sensor system must be listed explicitly or PX4 reports
+         "No valid data from Accel 0 / barometer missing / 0 compass". -->
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu"/>
+    <plugin
+      filename="gz-sim-air-pressure-system"
+      name="gz::sim::systems::AirPressure"/>
+    <plugin
+      filename="gz-sim-magnetometer-system"
+      name="gz::sim::systems::Magnetometer"/>
+    <plugin
+      filename="gz-sim-navsat-system"
+      name="gz::sim::systems::NavSat"/>
+    <plugin
+      filename="gz-sim-contact-system"
+      name="gz::sim::systems::Contact"/>
 
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

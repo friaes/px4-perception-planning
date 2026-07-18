@@ -146,7 +146,14 @@ RViz2 opens automatically via the launch file with:
 - **Full Cloud (RGB)** (`/point_cloud/full`) — toggle on for the photo-realistic cloud
 - **Depth Colormap** (`/depth/colormap`)
 
-![depth segmentation in RViz2](depth_perception_rviz.gif)
+![depth segmentation in RViz2](depth_perception_rviz.png)
+
+Quick health check (Terminal 3):
+
+```bash
+ros2 topic echo /depth/stats --once
+# e.g. frame=45 total_pts=118234 ground_pts=61120 obstacle_pts=57114 proc_ms=38.2
+```
 
 ## Launch / node parameters
 
@@ -159,3 +166,154 @@ RViz2 opens automatically via the launch file with:
 | `ransac_sample` | `4000` | points used to fit the plane |
 | `ground_normal_tol` | `0.25` | min `|n_y|` to accept a plane as ground |
 | `output_frame` | `camera_link` | frame stamped on all outputs |
+
+Override at launch, e.g. a denser cloud:
+
+```bash
+ros2 run depth_perception point_cloud_node --ros-args -p downsample_step:=2
+```
+
+---
+
+# Übungsblatt 09 — Path Planning and Motion Control
+
+Package: `path_planning`. Two nodes on top of the same PX4 SITL + `x500_depth`
+setup:
+
+- **Aufgabe 1 — Global Planner:** 3D collision-free path planning with **A\*** (default)
+  or **RRT** on a voxel occupancy grid, with altitude constraints and no-fly zones,
+  path visualization in RViz2, and execution on PX4 via MAVROS.
+- **Aufgabe 2 — Local Planner:** real-time obstacle avoidance with **Artificial
+  Potential Fields**, consuming the Task 2 obstacle cloud and sending velocity
+  setpoints to PX4.
+
+Planning is pure NumPy (no Octomap/OMPL/Nav2 needed). Everything is expressed in
+the `map` frame (ENU, metres), which matches MAVROS local position and setpoints.
+
+## Aufgabe 1 — Global 3D Path Planning
+
+The planner builds a 3D voxel `OccupancyGrid3D` from:
+- static obstacle boxes and no-fly cylinders (`params/scenario.yaml`),
+- an altitude corridor `[altitude_min, altitude_max]`,
+- optionally the live `/point_cloud/obstacles` from Task 2 (`use_live_cloud:=true`),
+
+inflates obstacles by `robot_radius`, then searches with A\* (26-connected, with
+no-corner-cutting) or RRT. The result is line-of-sight **shortcut** and published as
+a `nav_msgs/Path` plus a `MarkerArray` (occupied voxels, start/goal, path line).
+
+### Run (planning + visualization only)
+
+```bash
+docker exec -it px4_sitl bash
+source /opt/ros/jazzy/setup.bash
+source /root/ros2_ws/install/setup.bash
+
+ros2 launch path_planning global_planning.launch.py            # A* (default)
+ros2 launch path_planning global_planning.launch.py algorithm:=rrt
+```
+
+RViz2 opens on the `map` frame showing the occupancy grid, start (blue), goal
+(yellow) and the green planned path. Set a new goal live with the **2D Goal Pose**
+tool (publishes `/planner/goal`) or edit `goal:` in `params/scenario.yaml`.
+
+![planned path in RViz2](path_planning_rviz.png)
+
+### Fly the path on PX4 (execution)
+
+**Terminal - MAVROS**
+
+Run MAVROS: 
+
+```bash
+docker exec -it px4_sitl bash
+ros2 launch mavros px4.launch fcu_url:=udp://:14540@localhost:14557
+```
+
+Start PX4 SITL and MAVROS first (Terminal 1 + MAVROS), then:
+
+```bash
+# Offboard (default): streams position setpoints, arms, follows waypoints
+ros2 launch path_planning global_planning.launch.py execute:=true
+
+# Mission upload: converts to GPS waypoints, AUTO.MISSION
+ros2 launch path_planning global_planning.launch.py execute:=true exec_mode:=mission
+```
+
+The `mission_executor_node` subscribes to `/planner/path` and either streams
+`/mavros/setpoint_position/local` setpoints (offboard) or uploads a mission via
+`/mavros/mission/push` (mission), handling arming and mode switching.
+
+### Key parameters (`params/scenario.yaml`)
+
+| Parameter | Meaning |
+|-----------|---------|
+| `algorithm` | `astar` or `rrt` |
+| `resolution` | voxel size [m] |
+| `bounds` | `[xmin,xmax,ymin,ymax,zmin,zmax]` planning volume |
+| `robot_radius` | obstacle inflation [m] |
+| `altitude_min/max` | flight corridor [m] |
+| `start` / `goal` | endpoints [m] |
+| `obstacles` | flat list of boxes `[cx,cy,cz,sx,sy,sz, ...]` |
+| `no_fly_zones` | flat list of cylinders `[cx,cy,r,zmin,zmax, ...]` |
+| `use_live_cloud` | also block voxels from `/point_cloud/obstacles` |
+
+## Aufgabe 2 — Local Obstacle Avoidance (Potential Fields)
+
+`local_planner_node` flies toward a goal while reacting to obstacles in real time.
+Obstacle points from `/point_cloud/obstacles` (camera frame) are converted to the
+body FLU frame; an attractive velocity pulls toward the goal and a repulsive
+velocity pushes away from nearby points. The combined velocity is rotated into the
+ENU frame using the FCU yaw and published to `/mavros/setpoint_velocity/cmd_vel`.
+
+### Run
+
+Requires the Task 2 depth pipeline (for the obstacle cloud) plus PX4 SITL + MAVROS:
+
+```bash
+# Terminal A: depth perception (produces /point_cloud/obstacles)
+ros2 launch depth_perception depth_perception.launch.py rviz:=false
+
+# Terminal B: local planner
+ros2 launch path_planning local_planning.launch.py goal:="[20.0, 0.0, 3.0]"
+```
+
+### Performance metrics
+
+`local_planner_node` publishes `/local_planner/stats`:
+
+```bash
+ros2 topic echo /local_planner/stats
+# reached=... traveled_m=... straight_m=... path_efficiency=... min_obstacle_dist_m=...
+```
+
+`path_efficiency` = straight-line distance / distance actually travelled (1.0 =
+perfect), and `min_obstacle_dist_m` is the closest approach — run with different
+`v_max` / obstacle configurations to compare success rate and efficiency.
+
+### Key parameters
+
+| Parameter | Meaning |
+|-----------|---------|
+| `goal` | target position (ENU) |
+| `v_max` | max speed [m/s] |
+| `k_att` / `k_rep` | attractive / repulsive gains |
+| `influence_radius` | repulsion range `d0` [m] |
+| `goal_tol` | success radius [m] |
+
+## Build
+
+```bash
+cd /root/ros2_ws
+colcon build --packages-select path_planning --symlink-install
+source install/setup.bash
+```
+
+## Notes
+
+- The A\*/RRT search, occupancy grid, shortcutting, altitude/no-fly handling and
+  the potential-field frame math are all unit-tested offline. The MAVROS execution
+  (offboard arming, mission upload) follows the standard PX4 patterns and should be
+  verified in the loop — arm/OFFBOARD requires a steady setpoint stream (handled by
+  the node) and a connected FCU.
+- Octomap/OMPL/Nav2 are listed as tools but are not installed in the container;
+  the planners are implemented directly instead, matching the Task 2 approach.

@@ -1,0 +1,19 @@
+# Scenario for the global planner: obstacles, no-fly zones, altitude corridor.
+# Obstacles: flat list of axis-aligned boxes [cx,cy,cz, sx,sy,sz, ...]
+# No-fly zones: flat list of vertical cylinders [cx,cy,radius,zmin,zmax, ...]
+global_planner_node:
+  ros__parameters:
+    frame_id: "map"
+    algorithm: "astar"          # astar | rrt
+    resolution: 0.5
+    bounds: [-2.0, 30.0, -15.0, 15.0, 0.0, 12.0]
+    robot_radius: 0.6
+    altitude_min: 1.5
+    altitude_max: 10.0
+    start: [0.0, 0.0, 2.0]
+    goal:  [28.0, 0.0, 3.0]
+    obstacles: [14.0, 0.0, 5.0, 2.0, 18.0, 10.0,
+                8.0, -5.0, 4.0, 2.0, 2.0, 8.0]
+    no_fly_zones: [20.0, 6.0, 3.0, 0.0, 12.0]
+    use_live_cloud: false
+    auto_plan: true
