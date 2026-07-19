@@ -146,7 +146,7 @@ RViz2 opens automatically via the launch file with:
 - **Full Cloud (RGB)** (`/point_cloud/full`) — toggle on for the photo-realistic cloud
 - **Depth Colormap** (`/depth/colormap`)
 
-![depth segmentation in RViz2](depth_perception_rviz.png)
+![depth segmentation in RViz2](depth_perception_rviz.gif)
 
 Quick health check (Terminal 3):
 
